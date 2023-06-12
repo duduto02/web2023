@@ -52,9 +52,8 @@ public class UserDao {
      * @param limit 목록의 갯수와 페이지
      * @return 회원 목록
      */
-    public List<User> listUsers(int count, int page) {
-        int offset = (page - 1) * count;
-        return jdbcTemplate.query(LIST_USERS, userRowMapper, offset, count);
+    public List<User> listUsers(Limit limit) {
+        return jdbcTemplate.query(LIST_USERS, userRowMapper, limit.getOffset(), limit.getCount());
     }
 
     /**

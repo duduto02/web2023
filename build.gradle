@@ -38,6 +38,9 @@ dependencies {
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
     // apache commons
     implementation 'org.apache.commons:commons-lang3'
+    // owasp java encoder
+    implementation 'org.owasp.encoder:encoder:1.+'
+    implementation 'org.owasp.encoder:encoder-jsp:1.+'
 }
 
 tasks.named('test') {
